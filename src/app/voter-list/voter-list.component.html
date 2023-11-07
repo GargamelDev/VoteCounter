@@ -1,0 +1,16 @@
+<h2>Voter list</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Has voted</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let v of voters">
+            <td>{{v.name}}</td>
+            <td>{{v.hasVoted}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+<h1>Vote!</h1>
+<form (ngSubmit)="submit()">
+  <div class="form-group">
+    <label for="voter-name">Voter Name</label
+    ><select id="voter-name" class="form-control" [(ngModel)]="vote.voterId" name="voterId">
+        <option value=""></option>
+        <option *ngFor="let v of voters" value="{{v.id}}">{{v.name}} </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="candidate-name">Candidate Name</label
+    ><select id="candidate-name" class="form-control" [(ngModel)]="vote.candidateId" name="candidateId">
+      <option value=""></option>
+      <option *ngFor="let c of candidates" value="{{c.id}}">{{c.name}} </option>
+    </select>
+  </div>
+  <button class="btn btn-primary">Vote</button>
+</form>
